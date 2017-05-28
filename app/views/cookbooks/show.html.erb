@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Chef:</strong>
+  <%= @cookbook.chef %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @cookbook.category %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @cookbook.title %>
+</p>
+
+<p>
+  <strong>Ingredients:</strong>
+  <%= @cookbook.ingredients %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cookbook.description %>
+</p>
+
+<p>
+  <strong>Avatar:</strong>
+  <%= @cookbook.avatar %>
+</p>
+
+<%= link_to 'Edit', edit_cookbook_path(@cookbook) %> |
+<%= link_to 'Back', cookbooks_path %>
