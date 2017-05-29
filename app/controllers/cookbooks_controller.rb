@@ -4,7 +4,8 @@ class CookbooksController < ApplicationController
   # GET /cookbooks
   # GET /cookbooks.json
   def index
-    @cookbooks = Cookbook.all
+    @q = Cookbook.ransack(params[:q])
+    @cookbooks = @q.result(distinct: true)
   end
 
   # GET /cookbooks/1

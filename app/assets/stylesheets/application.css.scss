@@ -46,4 +46,20 @@ body {
     font-weight: bold;
     color: #C71585;
   }
+
+  .btn-primary {
+    background-color: #FF69B4;
+    border: 2px solid #800080;
+    font-weight: bold;
+    padding: 3px 6px;
+  }
+  .btn-primary:hover { background-color: #FF00FF;}
+
+  #q_category_cont, #q_title_cont {
+    width: 226px;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 3px;
+  }
+
 }

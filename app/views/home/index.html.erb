@@ -3,8 +3,32 @@
 
   </ul>
 
+  <div class="container">
+    <div class="row">
+      <%= search_form_for @q do |f| %>
+        <%= f.label :selecione_um_dos_campos_de_busca %>:<br>
+        <%= f.label :Categorias_de %>:
+          <%= f.search_field :category_cont, placeholder: 'Doces, Lanches, Salgados, Sobremesas...' %>
+        <%= f.label :Receitas_de %>:
+          <%= f.search_field :title_cont, placeholder: 'Pudins, Sopas, Carnes, Peixes, Massas...' %>
+        <%= submit_tag "Buscar", class: "btn btn-primary" %>
+      <% end %><br>
+    </div>
+  </div>
 
-  <div class="mini_box"></div>
+
+   <tbody>
+    <% @cookbooks.each do |cookbook| %>
+      <tr>
+        <td><%= cookbook.chef %></td>
+        <td><%= cookbook.category %></td>
+        <td><%= cookbook.title %></td>
+        <td><%= cookbook.ingredients %></td>
+        <td><%= cookbook.description %></td>
+        <td><%= cookbook.avatar %></td>
+      </tr>
+    <% end %>
+  </tbody>
 
 
 
